@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grocery Delivery App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light py-md-5 py-4">
+      <div class="container">
+        <a href="index.html">
+          <i class="bi bi-arrow-left-short text-dark display-3"></i>
+        </a>
+        <button class="bg-transparent border-0">
+          <i class="bi bi-search text-dark fs-4"></i>
+        </button>
+      </div>
+    </nav>
+    <main class="bg-light" id="items">
+      <div class="container">
+        <ul
+          class="nav nav-tabs overflow-x-scroll flex-nowrap mb-4"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active fw-semibold"
+              id="fruits-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fruits"
+              type="button"
+              role="tab"
+              aria-controls="fruits"
+              aria-selected="true"
+            >
+              Fruits
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-semibold"
+              id="vegetables-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#vegetables"
+              type="button"
+              role="tab"
+              aria-controls="vegetables"
+              aria-selected="false"
+            >
+              Vegetables
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-semibold"
+              id="bakery-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#bakery"
+              type="button"
+              role="tab"
+              aria-controls="bakery"
+              aria-selected="false"
+            >
+              Bakery
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-semibold"
+              id="snacks-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#snacks"
+              type="button"
+              role="tab"
+              aria-controls="snacks"
+              aria-selected="false"
+            >
+              Snacks
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link fw-semibold"
+              id="drinks-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#drinks"
+              type="button"
+              role="tab"
+              aria-controls="drinks"
+              aria-selected="false"
+            >
+              Drinks
+            </button>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div
+            class="tab-pane active"
+            id="fruits"
+            role="tabpanel"
+            aria-labelledby="fruits-tab"
+            tabindex="0"
+          >
+            <div
+              class="header d-flex justify-content-between align-items-center mb-3"
+            >
+              <h4 class="mb-0">Popular Item</h4>
+              <a
+                href="#fresh-produce"
+                class="small text-info btn shadow-none border-0 d-block expanded"
+              >
+                <i class="bi bi-funnel-fill fs-4"></i>
+              </a>
+            </div>
+            <div class="d-flex gap-4 list-items row row-cols-2">
+              <div class="avocado col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  data-bs-target="#exampleModal"
+                  class="avocado image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/avocado.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">
+                  Organic Hass Avocado
+                </p>
+                <p class="lead text-success">$23.65</p>
+              </div>
+              <div class="banana col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="banana image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/banana.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">
+                  Organic Banana (each)
+                </p>
+                <p class="lead text-success">$15.00</p>
+              </div>
+              <div class="carrot col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="carrot image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/carrots.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Peeled Carrots</p>
+                <p class="lead text-success">$16.00</p>
+              </div>
+              <div class="apple col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="apple image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/apple.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Apple California</p>
+                <p class="lead text-success">$20.00</p>
+              </div>
+              <div class="strawberry col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="strawberry image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/strawberry.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Fresh Strawberries</p>
+                <p class="lead text-success">$30.00</p>
+              </div>
+              <div class="grape col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="grape image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/grape.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Grape from Bordeaux</p>
+                <p class="lead text-success">$25.00</p>
+              </div>
+              <div class="guava col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="guava image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/fresh-produce/guava.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Vietnamese Guava</p>
+                <p class="lead text-success">$15.69</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="vegetables"
+            role="tabpanel"
+            aria-labelledby="vegetables-tab"
+            tabindex="0"
+          >
+            <div
+              class="header d-flex justify-content-between align-items-center mb-3"
+            >
+              <h4 class="mb-0">Popular Item</h4>
+              <a
+                href="#fresh-produce"
+                class="small text-info btn shadow-none border-0 d-block expanded"
+              >
+                <i class="bi bi-funnel-fill fs-4"></i>
+              </a>
+            </div>
+            <div class="list-items d-flex gap-4 row row-cols-2">
+              <div class="vegetable-1 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/vegetables/broccoli.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Broccoli</p>
+                <p class="lead text-success">$6.45</p>
+              </div>
+              <div class="vegetable-2 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/vegetables/cauliflower.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">CauliFlower</p>
+                <p class="lead text-success">$7.15</p>
+              </div>
+              <div class="vegetable-3 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img
+                    src="./assets/vegetables/eggplant.png"
+                    class="img-fluid"
+                  />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">EggPlant</p>
+                <p class="lead text-success">$5.75</p>
+              </div>
+              <div class="vegetable-4 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/vegetables/leaf.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Leaf</p>
+                <p class="lead text-success">$7.65</p>
+              </div>
+              <div class="vegetable-5 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/vegetables/salad.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Salad</p>
+                <p class="lead text-success">$7.95</p>
+              </div>
+              <div class="vegetable-6 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/vegetables/vege-1.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Vegetable 1</p>
+                <p class="lead text-success">$5.75</p>
+              </div>
+              <div class="vegetable-7 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="vegetable-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/vegetables/vege-2.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Vegetable 2</p>
+                <p class="lead text-success">$8.15</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="bakery"
+            role="tabpanel"
+            aria-labelledby="bakery-tab"
+            tabindex="0"
+          >
+            <div
+              class="header d-flex justify-content-between align-items-center mb-3"
+            >
+              <h4 class="mb-0">Popular Item</h4>
+              <a
+                href="#fresh-produce"
+                class="small text-info btn shadow-none border-0 d-block expanded"
+              >
+                <i class="bi bi-funnel-fill fs-4"></i>
+              </a>
+            </div>
+            <div
+              class="list-items row row-cols-2 d-flex gap-4 overflow-x-scroll"
+            >
+              <div class="bakery-1 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="bakery-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/bakery-1.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 1</p>
+                <p class="lead text-success">$6.45</p>
+              </div>
+              <div class="bakery-2 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="bakery-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/bakery-2.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 2</p>
+                <p class="lead text-success">$7.45</p>
+              </div>
+              <div class="bakery-3 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="bakery-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/bakery-3.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 3</p>
+                <p class="lead text-success">$6.95</p>
+              </div>
+              <div class="bakery-4 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="bakery-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/bakery-4.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 4</p>
+                <p class="lead text-success">$5.95</p>
+              </div>
+              <div class="cookie-1 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="cookie-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/cookie.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Cookie 1</p>
+                <p class="lead text-success">$6.75</p>
+              </div>
+              <div class="cookie-2 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="cookie-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/bakery/cookie-2.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Cookie 2</p>
+                <p class="lead text-success">$6.95</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="snacks"
+            role="tabpanel"
+            aria-labelledby="snacks-tab"
+            tabindex="0"
+          >
+            <div
+              class="header d-flex justify-content-between align-items-center mb-3"
+            >
+              <h4 class="mb-0">Popular Item</h4>
+              <a
+                href="#fresh-produce"
+                class="small text-info btn shadow-none border-0 d-block expanded"
+              >
+                <i class="bi bi-funnel-fill fs-4"></i>
+              </a>
+            </div>
+            <div
+              class="list-items row row-cols-2 d-flex gap-4 overflow-x-scroll"
+            >
+              <div class="snack-1 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-1.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
+                <p class="lead text-success">$6.45</p>
+              </div>
+              <div class="snack-2 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-2.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
+                <p class="lead text-success">$6.75</p>
+              </div>
+              <div class="snack-3 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-3.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
+                <p class="lead text-success">$7.45</p>
+              </div>
+              <div class="snack-4 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-4.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
+                <p class="lead text-success">$5.95</p>
+              </div>
+              <div class="snack-5 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-5.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
+                <p class="lead text-success">$6.95</p>
+              </div>
+              <div class="snack-6 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-6.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
+                <p class="lead text-success">$8.45</p>
+              </div>
+              <div class="snack-7 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-7.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
+                <p class="lead text-success">$6.15</p>
+              </div>
+              <div class="snack-8 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-8 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-8.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
+                <p class="lead text-success">$7.75</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="drinks"
+            role="tabpanel"
+            aria-labelledby="drinks-tab"
+            tabindex="0"
+          >
+            <div
+              class="header d-flex justify-content-between align-items-center mb-3"
+            >
+              <h4 class="mb-0">Popular Item</h4>
+              <a
+                href="#fresh-produce"
+                class="small text-info btn shadow-none border-0 d-block expanded"
+              >
+                <i class="bi bi-funnel-fill fs-4"></i>
+              </a>
+            </div>
+            <div
+              class="list-items row row-cols-2 d-flex gap-4 overflow-x-scroll"
+            >
+              <div class="snack-1 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-1.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
+                <p class="lead text-success">$6.45</p>
+              </div>
+              <div class="snack-2 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-2.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
+                <p class="lead text-success">$6.75</p>
+              </div>
+              <div class="snack-3 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-3.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
+                <p class="lead text-success">$7.45</p>
+              </div>
+              <div class="snack-4 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-4.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
+                <p class="lead text-success">$5.95</p>
+              </div>
+              <div class="snack-5 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-5.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
+                <p class="lead text-success">$6.95</p>
+              </div>
+              <div class="snack-6 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-6.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
+                <p class="lead text-success">$8.45</p>
+              </div>
+              <div class="snack-7 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-7.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
+                <p class="lead text-success">$6.15</p>
+              </div>
+              <div class="snack-8 col">
+                <button
+                  data-bs-toggle="modal"
+                  type="button"
+                  class="snack-8 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
+                >
+                  <a href="#"
+                    ><i
+                      class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                    ></i>
+                  </a>
+                  <img src="./assets/snacks/snack-8.png" class="img-fluid" />
+                </button>
+                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
+                <p class="lead text-success">$7.75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-light position-relative">
+          <button
+            class="border-0 position-absolute bg-transparent"
+            data-bs-dismiss="modal"
+            aria-label="close"
+          >
+            <i class="bi bi-arrow-left-short text-dark display-3"></i>
+          </button>
+          <div class="image p-5 vh-50">
+            <img
+              src="./assets/fresh-produce/avocado.png"
+              alt=""
+              class="img-fluid w-100 h-100"
+            />
+          </div>
+          <div class="modal-body vh-50 rounded-5 bg-white shadow">
+            <div class="title position-relative">
+              <div class="input-group d-flex rounded-2">
+                <span class="btn btn-info" type="button"> - </span>
+                <input
+                  type="number"
+                  class="form-control text-center"
+                  placeholder="1"
+                />
+                <span class="btn btn-info" type="button"> + </span>
+              </div>
+              <h4 class="my-3 w-50">Organic Hass Avocado</h4>
+              <p class="h2 mb-3 text-success">$23.65</p>
+            </div>
+            <p class="text-info mb-0">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Inventore, recusandae voluptatem aut unde delectus temporibus
+              repellendus rem quisquam eum dicta similique, impedit facere id
+              sequi dignissimos mollitia fugit accusamus magni.
+            </p>
+            <h4 class="my-3">Related Items</h4>
+            <div class="related-items d-flex gap-3 overflow-x-scroll mb-3">
+              <div class="banana item bg-light rounded-3 shadow-sm">
+                <a href="#"
+                  ><i
+                    class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                  ></i>
+                </a>
+                <div class="col-5">
+                  <button
+                    data-bs-toggle="modal"
+                    type="button"
+                    class="banana image d-flex bg-transparent justify-content-center align-items-center p-2 h-100 border-0"
+                  >
+                    <img
+                      src="./assets/fresh-produce/banana.png"
+                      class="img-fluid"
+                    />
+                  </button>
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center">
+                  <p class="text-wrap mb-1 pt-2 fw-medium">Banana</p>
+                  <p class="lead text-success">$15.00</p>
+                </div>
+              </div>
+              <div class="strawberry item bg-light rounded-3 shadow-sm">
+                <a href="#"
+                  ><i
+                    class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
+                  ></i>
+                </a>
+                <div class="col-5">
+                  <button
+                    data-bs-toggle="modal"
+                    type="button"
+                    class="strawberry image d-flex bg-transparent justify-content-center align-items-center p-2 h-100 border-0"
+                  >
+                    <img
+                      src="./assets/fresh-produce/strawberry.png"
+                      class="img-fluid"
+                    />
+                  </button>
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center">
+                  <p class="text-wrap mb-1 pt-2 fw-medium">Strawberries</p>
+                  <p class="lead text-success">$30.00</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="d-block btn btn-success rouned-3 text-white w-75 mx-auto"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swwiper JS here -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- ====== Bootstrap 5 JS here ======= -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
