@@ -163,11 +163,21 @@ body {
                     top: 20px;
                     left: 15px;
                 }
+                
+                .image {
+                    max-height: 40vh !important;
+                    img {
+                        object-fit: contain;
+                    }
+                }
 
                 .modal-body {
+                    height: 60vh !important;
+
                     .input-group {
                         width: 120px !important;
                         position: absolute;
+                        top: 0;
                         right: 20px;
 
                         span {

@@ -43,7 +43,7 @@
     <main class="bg-light" id="items">
       <div class="container">
         <ul
-          class="nav nav-tabs overflow-x-scroll flex-nowrap mb-4"
+          class="nav nav-tabs overflow-x-scroll flex-nowrap mb-4 overflow-y-hidden"
           id="myTab"
           role="tablist"
         >
@@ -862,15 +862,13 @@
           >
             <i class="bi bi-arrow-left-short text-dark display-3"></i>
           </button>
-          <div class="image p-5 vh-50">
-            <img
-              src="./assets/fresh-produce/avocado.png"
-              alt=""
-              class="img-fluid w-100 h-100"
-            />
+          <div class="image p-5">
+            <img src="./assets/fresh-produce/avocado.png" class="img-fluid" />
           </div>
-          <div class="modal-body vh-50 rounded-5 bg-white shadow">
-            <div class="title position-relative">
+          <div
+            class="modal-body d-flex flex-column justify-content-between rounded-5 bg-white shadow overflow-y-auto"
+          >
+            <div class="title mt-2 position-relative">
               <div class="input-group d-flex rounded-2">
                 <span class="btn btn-info" type="button"> - </span>
                 <input
@@ -880,7 +878,7 @@
                 />
                 <span class="btn btn-info" type="button"> + </span>
               </div>
-              <h4 class="my-3 w-50">Organic Hass Avocado</h4>
+              <h4 class="mb-3 w-50">Organic Hass Avocado</h4>
               <p class="h2 mb-3 text-success">$23.65</p>
             </div>
             <p class="text-info mb-0">

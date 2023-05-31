@@ -10869,9 +10869,19 @@ body .modal.fade .modal-dialog .modal-content button {
   top: 20px;
   left: 15px;
 }
+body .modal.fade .modal-dialog .modal-content .image {
+  max-height: 40vh !important;
+}
+body .modal.fade .modal-dialog .modal-content .image img {
+  object-fit: contain;
+}
+body .modal.fade .modal-dialog .modal-content .modal-body {
+  height: 60vh !important;
+}
 body .modal.fade .modal-dialog .modal-content .modal-body .input-group {
   width: 120px !important;
   position: absolute;
+  top: 0;
   right: 20px;
 }
 body .modal.fade .modal-dialog .modal-content .modal-body .input-group span {
