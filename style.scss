@@ -97,9 +97,11 @@ body {
         }
 
         footer {
-            i.bi {
-                &:hover {
-                    color: $success !important;
+            a {
+                &:hover, &.active {
+                    i.bi {
+                        color: $success !important;
+                    }
                 }
             }
         }
@@ -165,14 +167,14 @@ body {
                 }
                 
                 .image {
-                    max-height: 40vh !important;
+                    /* max-height: 50vh !important; */
                     img {
                         object-fit: contain;
                     }
                 }
 
                 .modal-body {
-                    height: 60vh !important;
+                    /* height: 50vh !important; */
 
                     .input-group {
                         width: 120px !important;

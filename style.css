@@ -10824,7 +10824,7 @@ body main#index section .carousel-slide .column .image img {
   height: 100%;
   object-fit: fill;
 }
-body main#index footer i.bi:hover {
+body main#index footer a:hover i.bi, body main#index footer a.active i.bi {
   color: #45C163 !important;
 }
 body main#items ul#myTab {
@@ -10870,13 +10870,13 @@ body .modal.fade .modal-dialog .modal-content button {
   left: 15px;
 }
 body .modal.fade .modal-dialog .modal-content .image {
-  max-height: 40vh !important;
+  /* max-height: 50vh !important; */
 }
 body .modal.fade .modal-dialog .modal-content .image img {
   object-fit: contain;
 }
 body .modal.fade .modal-dialog .modal-content .modal-body {
-  height: 60vh !important;
+  /* height: 50vh !important; */
 }
 body .modal.fade .modal-dialog .modal-content .modal-body .input-group {
   width: 120px !important;

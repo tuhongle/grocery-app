@@ -27,7 +27,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="main.js"></script>
+    <script defer src="items.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-light py-md-5 py-4">
@@ -49,7 +49,7 @@
         >
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link active fw-semibold"
+              class="nav-link active fw-semibold border-0 shadow-none"
               id="fruits-tab"
               data-bs-toggle="tab"
               data-bs-target="#fruits"
@@ -63,7 +63,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link fw-semibold"
+              class="nav-link fw-semibold border-0 shadow-none"
               id="vegetables-tab"
               data-bs-toggle="tab"
               data-bs-target="#vegetables"
@@ -77,7 +77,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link fw-semibold"
+              class="nav-link fw-semibold border-0 shadow-none"
               id="bakery-tab"
               data-bs-toggle="tab"
               data-bs-target="#bakery"
@@ -91,7 +91,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link fw-semibold"
+              class="nav-link fw-semibold border-0 shadow-none"
               id="snacks-tab"
               data-bs-toggle="tab"
               data-bs-target="#snacks"
@@ -105,7 +105,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link fw-semibold"
+              class="nav-link fw-semibold border-0 shadow-none"
               id="drinks-tab"
               data-bs-toggle="tab"
               data-bs-target="#drinks"
@@ -153,18 +153,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/avocado.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
                   Organic Hass Avocado
                 </p>
-                <p class="lead text-success">$23.65</p>
+                <p class="item-price lead text-success">$23.65</p>
               </div>
               <div class="banana col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="banana image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -174,18 +175,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/banana.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
                   Organic Banana (each)
                 </p>
-                <p class="lead text-success">$15.00</p>
+                <p class="item-price lead text-success">$15.00</p>
               </div>
               <div class="carrot col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="carrot image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -195,16 +197,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/carrots.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Peeled Carrots</p>
-                <p class="lead text-success">$16.00</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Peeled Carrots
+                </p>
+                <p class="item-price lead text-success">$16.00</p>
               </div>
               <div class="apple col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="apple image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -214,16 +219,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/apple.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Apple California</p>
-                <p class="lead text-success">$20.00</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Apple California
+                </p>
+                <p class="item-price lead text-success">$20.00</p>
               </div>
               <div class="strawberry col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="strawberry image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -233,16 +241,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/strawberry.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Fresh Strawberries</p>
-                <p class="lead text-success">$30.00</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Fresh Strawberries
+                </p>
+                <p class="item-price lead text-success">$30.00</p>
               </div>
               <div class="grape col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="grape image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -252,16 +263,19 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/grape.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Grape from Bordeaux</p>
-                <p class="lead text-success">$25.00</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Grape from Bordeaux
+                </p>
+                <p class="item-price lead text-success">$25.00</p>
               </div>
               <div class="guava col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="guava image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -271,11 +285,13 @@
                   </a>
                   <img
                     src="./assets/fresh-produce/guava.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Vietnamese Guava</p>
-                <p class="lead text-success">$15.69</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Vietnamese Guava
+                </p>
+                <p class="item-price lead text-success">$15.69</p>
               </div>
             </div>
           </div>
@@ -302,6 +318,7 @@
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -311,16 +328,17 @@
                   </a>
                   <img
                     src="./assets/vegetables/broccoli.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Broccoli</p>
-                <p class="lead text-success">$6.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Broccoli</p>
+                <p class="item-price lead text-success">$6.45</p>
               </div>
               <div class="vegetable-2 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -330,16 +348,19 @@
                   </a>
                   <img
                     src="./assets/vegetables/cauliflower.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">CauliFlower</p>
-                <p class="lead text-success">$7.15</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  CauliFlower
+                </p>
+                <p class="item-price lead text-success">$7.15</p>
               </div>
               <div class="vegetable-3 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -349,16 +370,17 @@
                   </a>
                   <img
                     src="./assets/vegetables/eggplant.png"
-                    class="img-fluid"
+                    class="img-fluid item-image"
                   />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">EggPlant</p>
-                <p class="lead text-success">$5.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">EggPlant</p>
+                <p class="item-price lead text-success">$5.75</p>
               </div>
               <div class="vegetable-4 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -366,15 +388,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/vegetables/leaf.png" class="img-fluid" />
+                  <img
+                    src="./assets/vegetables/leaf.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Leaf</p>
-                <p class="lead text-success">$7.65</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Leaf</p>
+                <p class="item-price lead text-success">$7.65</p>
               </div>
               <div class="vegetable-5 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -382,15 +408,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/vegetables/salad.png" class="img-fluid" />
+                  <img
+                    src="./assets/vegetables/salad.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Salad</p>
-                <p class="lead text-success">$7.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Salad</p>
+                <p class="item-price lead text-success">$7.95</p>
               </div>
               <div class="vegetable-6 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -398,15 +428,21 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/vegetables/vege-1.png" class="img-fluid" />
+                  <img
+                    src="./assets/vegetables/vege-1.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Vegetable 1</p>
-                <p class="lead text-success">$5.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Vegetable 1
+                </p>
+                <p class="item-price lead text-success">$5.75</p>
               </div>
               <div class="vegetable-7 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="vegetable-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -414,10 +450,15 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/vegetables/vege-2.png" class="img-fluid" />
+                  <img
+                    src="./assets/vegetables/vege-2.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Vegetable 2</p>
-                <p class="lead text-success">$8.15</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">
+                  Vegetable 2
+                </p>
+                <p class="item-price lead text-success">$8.15</p>
               </div>
             </div>
           </div>
@@ -446,6 +487,7 @@
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="bakery-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -453,15 +495,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/bakery-1.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/bakery-1.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 1</p>
-                <p class="lead text-success">$6.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Bakery 1</p>
+                <p class="item-price lead text-success">$6.45</p>
               </div>
               <div class="bakery-2 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="bakery-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -469,15 +515,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/bakery-2.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/bakery-2.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 2</p>
-                <p class="lead text-success">$7.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Bakery 2</p>
+                <p class="item-price lead text-success">$7.45</p>
               </div>
               <div class="bakery-3 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="bakery-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -485,15 +535,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/bakery-3.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/bakery-3.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 3</p>
-                <p class="lead text-success">$6.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Bakery 3</p>
+                <p class="item-price lead text-success">$6.95</p>
               </div>
               <div class="bakery-4 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="bakery-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -501,15 +555,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/bakery-4.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/bakery-4.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Bakery 4</p>
-                <p class="lead text-success">$5.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Bakery 4</p>
+                <p class="item-price lead text-success">$5.95</p>
               </div>
               <div class="cookie-1 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="cookie-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -517,15 +575,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/cookie.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/cookie.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Cookie 1</p>
-                <p class="lead text-success">$6.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Cookie 1</p>
+                <p class="item-price lead text-success">$6.75</p>
               </div>
               <div class="cookie-2 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="cookie-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -533,10 +595,13 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/bakery/cookie-2.png" class="img-fluid" />
+                  <img
+                    src="./assets/bakery/cookie-2.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Cookie 2</p>
-                <p class="lead text-success">$6.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Cookie 2</p>
+                <p class="item-price lead text-success">$6.95</p>
               </div>
             </div>
           </div>
@@ -565,6 +630,7 @@
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -572,15 +638,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-1.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-1.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
-                <p class="lead text-success">$6.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
+                <p class="item-price lead text-success">$6.45</p>
               </div>
               <div class="snack-2 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -588,15 +658,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-2.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-2.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
-                <p class="lead text-success">$6.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
+                <p class="item-price lead text-success">$6.75</p>
               </div>
               <div class="snack-3 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -604,15 +678,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-3.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-3.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
-                <p class="lead text-success">$7.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
+                <p class="item-price lead text-success">$7.45</p>
               </div>
               <div class="snack-4 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -620,15 +698,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-4.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-4.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
-                <p class="lead text-success">$5.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
+                <p class="item-price lead text-success">$5.95</p>
               </div>
               <div class="snack-5 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -636,15 +718,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-5.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-5.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
-                <p class="lead text-success">$6.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
+                <p class="item-price lead text-success">$6.95</p>
               </div>
               <div class="snack-6 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -652,15 +738,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-6.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-6.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
-                <p class="lead text-success">$8.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
+                <p class="item-price lead text-success">$8.45</p>
               </div>
               <div class="snack-7 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -668,15 +758,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-7.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-7.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
-                <p class="lead text-success">$6.15</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
+                <p class="item-price lead text-success">$6.15</p>
               </div>
               <div class="snack-8 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-8 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -684,10 +778,13 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-8.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-8.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
-                <p class="lead text-success">$7.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
+                <p class="item-price lead text-success">$7.75</p>
               </div>
             </div>
           </div>
@@ -716,6 +813,7 @@
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-1 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -723,15 +821,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-1.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-1.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
-                <p class="lead text-success">$6.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 1</p>
+                <p class="item-price lead text-success">$6.45</p>
               </div>
               <div class="snack-2 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-2 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -739,15 +841,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-2.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-2.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
-                <p class="lead text-success">$6.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 2</p>
+                <p class="item-price lead text-success">$6.75</p>
               </div>
               <div class="snack-3 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-3 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -755,15 +861,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-3.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-3.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
-                <p class="lead text-success">$7.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 3</p>
+                <p class="item-price lead text-success">$7.45</p>
               </div>
               <div class="snack-4 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-4 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -771,15 +881,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-4.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-4.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
-                <p class="lead text-success">$5.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 4</p>
+                <p class="item-price lead text-success">$5.95</p>
               </div>
               <div class="snack-5 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-5 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -787,15 +901,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-5.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-5.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
-                <p class="lead text-success">$6.95</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 5</p>
+                <p class="item-price lead text-success">$6.95</p>
               </div>
               <div class="snack-6 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-6 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -803,15 +921,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-6.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-6.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
-                <p class="lead text-success">$8.45</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 6</p>
+                <p class="item-price lead text-success">$8.45</p>
               </div>
               <div class="snack-7 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-7 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -819,15 +941,19 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-7.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-7.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
-                <p class="lead text-success">$6.15</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 7</p>
+                <p class="item-price lead text-success">$6.15</p>
               </div>
               <div class="snack-8 col">
                 <button
                   data-bs-toggle="modal"
                   type="button"
+                  data-bs-target="#exampleModal"
                   class="snack-8 image bg-white rounded-4 shadow-sm d-flex justify-content-center align-items-center p-4 border-0"
                 >
                   <a href="#"
@@ -835,10 +961,13 @@
                       class="bi bi-heart-fill text-info position-absolute top-0 end-0 mt-2 me-3"
                     ></i>
                   </a>
-                  <img src="./assets/snacks/snack-8.png" class="img-fluid" />
+                  <img
+                    src="./assets/snacks/snack-8.png"
+                    class="img-fluid item-image"
+                  />
                 </button>
-                <p class="text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
-                <p class="lead text-success">$7.75</p>
+                <p class="item-name text-wrap mb-0 pt-2 fw-medium">Snack 8</p>
+                <p class="item-price lead text-success">$7.75</p>
               </div>
             </div>
           </div>
@@ -859,27 +988,34 @@
             class="border-0 position-absolute bg-transparent"
             data-bs-dismiss="modal"
             aria-label="close"
+            id="closeCart"
           >
             <i class="bi bi-arrow-left-short text-dark display-3"></i>
           </button>
-          <div class="image p-5">
-            <img src="./assets/fresh-produce/avocado.png" class="img-fluid" />
+          <div class="image vh-50 p-5">
+            <img
+              src="./assets/fresh-produce/avocado.png"
+              class="img-fluid item-image"
+              id="modal-img"
+            />
           </div>
           <div
-            class="modal-body d-flex flex-column justify-content-between rounded-5 bg-white shadow overflow-y-auto"
+            class="modal-body vh-50 d-flex flex-column justify-content-between rounded-5 bg-white shadow overflow-y-auto"
           >
             <div class="title mt-2 position-relative">
               <div class="input-group d-flex rounded-2">
-                <span class="btn btn-info" type="button"> - </span>
+                <span class="btn btn-info" type="button" id="minus"> - </span>
                 <input
                   type="number"
                   class="form-control text-center"
                   placeholder="1"
+                  id="orders"
+                  value="1"
                 />
-                <span class="btn btn-info" type="button"> + </span>
+                <span class="btn btn-info" type="button" id="plus"> + </span>
               </div>
-              <h4 class="mb-3 w-50">Organic Hass Avocado</h4>
-              <p class="h2 mb-3 text-success">$23.65</p>
+              <h4 class="mb-3 w-50" id="modal-name">Organic Hass Avocado</h4>
+              <p class="h2 mb-3 text-success" id="modal-price">$23.65</p>
             </div>
             <p class="text-info mb-0">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -899,17 +1035,18 @@
                   <button
                     data-bs-toggle="modal"
                     type="button"
+                    data-bs-target="#exampleModal"
                     class="banana image d-flex bg-transparent justify-content-center align-items-center p-2 h-100 border-0"
                   >
                     <img
                       src="./assets/fresh-produce/banana.png"
-                      class="img-fluid"
+                      class="img-fluid item-image"
                     />
                   </button>
                 </div>
                 <div class="col-7 d-flex flex-column justify-content-center">
-                  <p class="text-wrap mb-1 pt-2 fw-medium">Banana</p>
-                  <p class="lead text-success">$15.00</p>
+                  <p class="item-name text-wrap mb-1 pt-2 fw-medium">Banana</p>
+                  <p class="item-price lead text-success">$15.00</p>
                 </div>
               </div>
               <div class="strawberry item bg-light rounded-3 shadow-sm">
@@ -922,21 +1059,25 @@
                   <button
                     data-bs-toggle="modal"
                     type="button"
+                    data-bs-target="#exampleModal"
                     class="strawberry image d-flex bg-transparent justify-content-center align-items-center p-2 h-100 border-0"
                   >
                     <img
                       src="./assets/fresh-produce/strawberry.png"
-                      class="img-fluid"
+                      class="img-fluid item-image"
                     />
                   </button>
                 </div>
                 <div class="col-7 d-flex flex-column justify-content-center">
-                  <p class="text-wrap mb-1 pt-2 fw-medium">Strawberries</p>
-                  <p class="lead text-success">$30.00</p>
+                  <p class="item-name text-wrap mb-1 pt-2 fw-medium">
+                    Strawberries
+                  </p>
+                  <p class="item-price lead text-success">$30.00</p>
                 </div>
               </div>
             </div>
             <button
+              id="addToCart"
               class="d-block btn btn-success rouned-3 text-white w-75 mx-auto"
             >
               Add to cart
