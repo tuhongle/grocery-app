@@ -32,12 +32,18 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-light py-md-5 py-4">
       <div class="container">
-        <a href="index.html">
-          <i class="bi bi-arrow-left-short text-dark display-3"></i>
-        </a>
-        <button class="bg-transparent border-0">
-          <i class="bi bi-search text-dark fs-4"></i>
-        </button>
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <a href="index.html">
+            <i class="bi bi-arrow-left-short text-dark display-3"></i>
+          </a>
+          <input
+            id="searchInput"
+            type="text"
+            class="form-control border-bottom shadow-none bg-transparent border-0 d-inline-block text-dark mx-2 index"
+            placeholder="Search here..."
+          />
+          <i class="bi bi-search text-dark fs-4" id="showSearch"></i>
+        </div>
       </div>
     </nav>
     <main class="bg-light" id="items">

@@ -48,3 +48,11 @@ closeCart.onclick = function () {
 addToCart.onclick = function () {
   orders.value = 1;
 };
+
+//? Show Search Input
+
+const searchButton = document.getElementById("showSearch");
+
+searchButton.onclick = function () {
+  document.getElementById("searchInput").classList.toggle("show");
+};

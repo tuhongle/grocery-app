@@ -10775,6 +10775,26 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body nav input[type=text] {
+  width: 0 !important;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+body nav input[type=text].show {
+  width: 100% !important;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transition: all 0.75s linear;
+}
+body nav input[type=text]::placeholder {
+  color: white !important;
+}
+body nav input[type=text].index::placeholder {
+  color: #212529 !important;
+}
 body main#index .header .expanded {
   font-size: 12px !important;
 }

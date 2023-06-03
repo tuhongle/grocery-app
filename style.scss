@@ -31,6 +31,35 @@ $theme-colors: map-merge($theme-colors,(
 }
 
 body {
+    nav {
+        input[type="text"] {
+            width: 0 !important;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+
+            &.show {
+                width: 100% !important;
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                transition: all 0.75s linear;
+            }
+
+            &::placeholder {
+                color: white !important;
+            }
+
+            &.index {
+
+                &::placeholder {
+                    color: $dark !important;
+                }
+            }
+        }
+    }
+
     main#index {
         .header {
             .expanded {

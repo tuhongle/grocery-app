@@ -9,3 +9,12 @@ viewItems.onclick = function () {
     } */
   categories.classList.toggle("show");
 };
+
+//? Show Search Input
+
+const searchButton = document.getElementById("showSearch");
+
+searchButton.onclick = function () {
+  const searchInput = document.getElementById("searchInput");
+  searchInput.classList.toggle("show");
+};
